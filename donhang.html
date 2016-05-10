@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
         <link rel="stylesheet" href="css/cms.css">
         <link rel="stylesheet" href="css/green.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -203,8 +204,11 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        
+                                    <div class="col-md-2 col-sm-2 col-xs-12 col-md-offset-5">
+                                        <div class="input-prepend input-group text-right">
+                                            <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                            <input type="text" style="width: 200px" name="reservation" id="reservation" class="form-control" value="" placeholder="Từ ngày - đến ngày"/>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -216,9 +220,9 @@
                                                     <col width="15%">
                                                     <col width="15%">
                                                     <col width="15%">
+                                                    <col width="10%">
+                                                    <col width="7%">
                                                     <col width="15%">
-                                                    <col width="15%">
-                                                    <col width="12%">
                                                 </colgroup>
                                                 <thead>
                                                     <tr>
@@ -229,7 +233,7 @@
                                                         <th class="column-title">Ngày bán</th>
                                                         <th class="column-title">Khách hàng</th>
                                                         <th class="column-title">Trạng thái</th>
-                                                        <th class="column-title">Tổng tiền</th>
+                                                        <th class="column-title text-right">Tổng tiền</th>
                                                         <th class="column-title"></th>
                                                     </tr>
                                                 </thead>
@@ -246,10 +250,10 @@
                                                                 <span class="label label-success">Hoàn thành</span>
                                                             </h5>
                                                         </td>
-                                                        <td>
+                                                        <td class="text-right">
                                                             <strong>1,290,000</strong>
                                                         </td>
-                                                        <td>
+                                                        <td class="text-center">
                                                             <a href="#" class="btn btn-xs btn-warning">
                                                                 <i class="fa fa-edit"></i>
                                                                 <span>Chỉnh sửa</span>
@@ -272,10 +276,10 @@
                                                                 <span class="label label-success">Hoàn thành</span>
                                                             </h5>
                                                         </td>
-                                                        <td>
+                                                        <td class="text-right">
                                                             <strong>570,000</strong>
                                                         </td>
-                                                        <td>
+                                                        <td class="text-center">
                                                             <a href="#" class="btn btn-xs btn-warning">
                                                                 <i class="fa fa-edit"></i>
                                                                 <span>Chỉnh sửa</span>
@@ -298,10 +302,10 @@
                                                                 <span class="label label-warning">Còn nợ</span>
                                                             </h5>
                                                         </td>
-                                                        <td>
+                                                        <td class="text-right">
                                                             <strong>109,000</strong>
                                                         </td>
-                                                        <td>
+                                                        <td class="text-center">
                                                             <a href="#" class="btn btn-xs btn-warning">
                                                                 <i class="fa fa-edit"></i>
                                                                 <span>Chỉnh sửa</span>
@@ -324,10 +328,10 @@
                                                                 <span class="label label-success">Hoàn thành</span>
                                                             </h5>
                                                         </td>
-                                                        <td>
+                                                        <td class="text-right">
                                                             <strong>290,000</strong>
                                                         </td>
-                                                        <td>
+                                                        <td class="text-center">
                                                             <a href="#" class="btn btn-xs btn-warning">
                                                                 <i class="fa fa-edit"></i>
                                                                 <span>Chỉnh sửa</span>
@@ -376,15 +380,23 @@
         <script src="js/bootstrap.js"></script>
         <script src="js/cms.js"></script>
         <script src="js/icheck.min.js"></script>
+        <script src="js/moment.min.js"></script>
+        <script src="js/bootstrap-datetimepicker.min.js"></script>
+        <script src="js/daterangepicker.js"></script>
         <script type="text/javascript">
-            if ($("input.flat")[0]) {
-                $(document).ready(function () {
-                    $('input.flat').iCheck({
-                        checkboxClass: 'icheckbox_flat-green',
-                        radioClass: 'iradio_flat-green'
-                    });
+            $(document).ready(function () {
+                $('input.flat').iCheck({
+                    checkboxClass: 'icheckbox_flat-green',
+                    radioClass: 'iradio_flat-green'
                 });
-            }
+
+                // data picker
+                $('#reservation').daterangepicker({
+                        opens: 'left',
+                    }, function (start, end, label) {
+                    console.log(start.toISOString(), end.toISOString(), label);
+                });
+            });
             
             $('table input').on('ifChecked', function () {
                 $(this).parent().parent().parent().addClass('selected');
