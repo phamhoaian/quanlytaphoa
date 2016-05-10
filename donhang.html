@@ -191,12 +191,12 @@
                                         <div class="input-group">
                                             <input type="text" placeholder="Nhập mã đơn hoặc mã/họ tên/SĐT khách hàng và enter" class="form-control">
                                             <span class="input-group-btn">
-                                                <select name="filter" class="form-control ML5" style="width:160px">
+                                                <select name="filter" class="form-control">
                                                     <option value="0" selected="selected">Tất cả</option>
                                                     <option value="1">Đơn hàng đã xóa</option>
                                                     <option value="2">Đơn hàng còn nợ</option>
                                                 </select>
-                                                <button class="btn btn-primary" style="margin-left:5px">
+                                                <button class="btn btn-primary">
                                                     <i class="fa fa-search"></i>
                                                     <span>Tìm kiếm</span>
                                                 </button>
@@ -340,6 +340,27 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <label>
+                                            <span>Hiển thị</span>
+                                            <select name="limit" id="limit" style="padding: 5px;">
+                                                <option value="10" selected="selected">10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                                <option value="0">Tất cả</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
+                                        <div class="paging">
+                                            <span class="current">1</span>
+                                            <a href="#">2</a>
+                                            <a href="#">&gt;</a>
                                         </div>
                                     </div>
                                 </div>

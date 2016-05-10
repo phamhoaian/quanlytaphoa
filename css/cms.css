@@ -78,6 +78,9 @@ textarea.form-control {
 .panel_toolbox {
     float: right;
 }
+.form-control {
+    border-radius: 4px !important;
+}
 /* LEFT SIDEBAR */
 .main .left-col {
 	padding: 0;
@@ -746,6 +749,28 @@ table.jambo_table tbody tr.selected td {
 }
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     color: #FFF !important;
+}
+/* Input group */
+.input-group .input-group-btn select {
+    min-width: 160px;
+    margin-left: 5px;
+}
+.input-group .input-group-btn > .btn {
+    margin-left: 5px;
+    border-radius: 4px;
+}
+/* Placeholder */
+::-webkit-input-placeholder {
+    color: #858585;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #858585;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #858585;
+}
+:-ms-input-placeholder {  
+    color: #858585;
 }
 @media (max-width: 1024px) {
     table.jambo_table .btn {
