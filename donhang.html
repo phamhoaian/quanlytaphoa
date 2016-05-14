@@ -183,192 +183,333 @@
                     <!-- page-title -->
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                            <form action="">
-                                <div style="display:none">
-                                    <input type="hidden" name="boxChecked" value="">
-                                </div>
-                                <div class="row MT10 MB20">
-                                    <div class="col-md-5 col-sm-5 col-xs-12">
-                                        <div class="input-group">
-                                            <input type="text" placeholder="Nhập mã đơn hoặc mã/họ tên/SĐT khách hàng và enter" class="form-control">
-                                            <span class="input-group-btn">
-                                                <select name="filter" class="form-control">
-                                                    <option value="0" selected="selected">Tất cả</option>
-                                                    <option value="1">Đơn hàng đã xóa</option>
-                                                    <option value="2">Đơn hàng còn nợ</option>
-                                                </select>
-                                                <button class="btn btn-primary">
-                                                    <i class="fa fa-search"></i>
-                                                    <span>Tìm kiếm</span>
-                                                </button>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2 col-sm-2 col-xs-12 col-md-offset-5">
-                                        <div class="input-prepend input-group text-right">
-                                            <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
-                                            <input type="text" style="width: 200px" name="reservation" id="reservation" class="form-control" value="" placeholder="Từ ngày - đến ngày"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="table-responsive">
-                                            <table class="table jambo_table bulk_action">
-                                                <colgroup>
-                                                    <col width="3%">
-                                                    <col width="15%">
-                                                    <col width="15%">
-                                                    <col width="15%">
-                                                    <col width="10%">
-                                                    <col width="7%">
-                                                    <col width="15%">
-                                                </colgroup>
-                                                <thead>
-                                                    <tr>
-                                                        <th>
-                                                            <input type="checkbox" id="check-all" class="flat">
-                                                        </th>
-                                                        <th class="column-title">Mã đơn hàng</th>
-                                                        <th class="column-title">Ngày bán</th>
-                                                        <th class="column-title">Khách hàng</th>
-                                                        <th class="column-title">Trạng thái</th>
-                                                        <th class="column-title text-right">Tổng tiền</th>
-                                                        <th class="column-title"></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <input type="checkbox" class="flat" name="id[]" value="1">
-                                                        </td>
-                                                        <td>HD000004</td>
-                                                        <td>06/05/2016 21:20</td>
-                                                        <td>Khách lẻ</td>
-                                                        <td>
-                                                            <h5 class="MG0">
-                                                                <span class="label label-success">Hoàn thành</span>
-                                                            </h5>
-                                                        </td>
-                                                        <td class="text-right">
-                                                            <strong>1,290,000</strong>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <a href="#" class="btn btn-xs btn-warning">
-                                                                <i class="fa fa-edit"></i>
-                                                                <span>Chỉnh sửa</span>
-                                                            </a>
-                                                            <a href="#" class="btn btn-xs btn-danger">
-                                                                <i class="fa fa-trash"></i>
-                                                                <span>Xóa</span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <input type="checkbox" class="flat" name="id[]" value="1">
-                                                        </td>
-                                                        <td>HD000003</td>
-                                                        <td>06/05/2016 21:20</td>
-                                                        <td>Khách lẻ</td>
-                                                        <td>
-                                                            <h5 class="MG0">
-                                                                <span class="label label-success">Hoàn thành</span>
-                                                            </h5>
-                                                        </td>
-                                                        <td class="text-right">
-                                                            <strong>570,000</strong>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <a href="#" class="btn btn-xs btn-warning">
-                                                                <i class="fa fa-edit"></i>
-                                                                <span>Chỉnh sửa</span>
-                                                            </a>
-                                                            <a href="#" class="btn btn-xs btn-danger">
-                                                                <i class="fa fa-trash"></i>
-                                                                <span>Xóa</span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <input type="checkbox" class="flat" name="id[]" value="1">
-                                                        </td>
-                                                        <td>HD000002</td>
-                                                        <td>06/05/2016 21:20</td>
-                                                        <td>Khách lẻ</td>
-                                                        <td>
-                                                            <h5 class="MG0">
-                                                                <span class="label label-warning">Còn nợ</span>
-                                                            </h5>
-                                                        </td>
-                                                        <td class="text-right">
-                                                            <strong>109,000</strong>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <a href="#" class="btn btn-xs btn-warning">
-                                                                <i class="fa fa-edit"></i>
-                                                                <span>Chỉnh sửa</span>
-                                                            </a>
-                                                            <a href="#" class="btn btn-xs btn-danger">
-                                                                <i class="fa fa-trash"></i>
-                                                                <span>Xóa</span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <input type="checkbox" class="flat" name="id[]" value="1">
-                                                        </td>
-                                                        <td>HD000001</td>
-                                                        <td>06/05/2016 21:20</td>
-                                                        <td>Khách lẻ</td>
-                                                        <td>
-                                                            <h5 class="MG0">
-                                                                <span class="label label-success">Hoàn thành</span>
-                                                            </h5>
-                                                        </td>
-                                                        <td class="text-right">
-                                                            <strong>290,000</strong>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <a href="#" class="btn btn-xs btn-warning">
-                                                                <i class="fa fa-edit"></i>
-                                                                <span>Chỉnh sửa</span>
-                                                            </a>
-                                                            <a href="#" class="btn btn-xs btn-danger">
-                                                                <i class="fa fa-trash"></i>
-                                                                <span>Xóa</span>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <label>
-                                            <span>Hiển thị</span>
-                                            <select name="limit" id="limit" style="padding: 5px;">
-                                                <option value="10" selected="selected">10</option>
-                                                <option value="25">25</option>
-                                                <option value="50">50</option>
-                                                <option value="100">100</option>
-                                                <option value="0">Tất cả</option>
+                            <div style="display:none">
+                                <input type="hidden" name="boxChecked" value="">
+                            </div>
+                            <div class="row MT10 MB20">
+                                <div class="col-md-5 col-sm-5 col-xs-12">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="Nhập mã đơn hoặc mã/họ tên/SĐT khách hàng và enter" class="form-control">
+                                        <span class="input-group-btn">
+                                            <select name="filter" class="form-control">
+                                                <option value="0" selected="selected">Tất cả</option>
+                                                <option value="1">Đơn hàng đã xóa</option>
+                                                <option value="2">Đơn hàng còn nợ</option>
                                             </select>
-                                        </label>
+                                            <button class="btn btn-primary">
+                                                <i class="fa fa-search"></i>
+                                                <span>Tìm kiếm</span>
+                                            </button>
+                                        </span>
                                     </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-12 text-right">
-                                        <div class="paging">
-                                            <span class="current">1</span>
-                                            <a href="#">2</a>
-                                            <a href="#">&gt;</a>
+                                </div>
+                                <div class="col-md-2 col-sm-2 col-xs-12 col-md-offset-5">
+                                    <div class="input-prepend input-group text-right">
+                                        <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar"></i></span>
+                                        <input type="text" style="width: 219px" name="reservation" id="reservation" class="form-control" value="" placeholder="Từ ngày - đến ngày"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="table-responsive">
+                                        <table class="table jambo_table bulk_action">
+                                            <colgroup>
+                                                <col width="3%">
+                                                <col width="15%">
+                                                <col width="15%">
+                                                <col width="15%">
+                                                <col width="10%">
+                                                <col width="7%">
+                                                <col width="15%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <input type="checkbox" id="check-all" class="flat">
+                                                    </th>
+                                                    <th class="column-title">Mã đơn hàng</th>
+                                                    <th class="column-title">Ngày bán</th>
+                                                    <th class="column-title">Khách hàng</th>
+                                                    <th class="column-title">Trạng thái</th>
+                                                    <th class="column-title text-right">Tổng tiền</th>
+                                                    <th class="column-title"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" class="flat" name="id[]" value="1">
+                                                    </td>
+                                                    <td>HD000004</td>
+                                                    <td>06/05/2016 21:20</td>
+                                                    <td>Khách lẻ</td>
+                                                    <td>
+                                                        <h5 class="MG0">
+                                                            <span class="label label-success">Hoàn thành</span>
+                                                        </h5>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>1,290,000</strong>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button class="btn btn-xs btn-warning" data-toggle="modal" data-target="#editInvoice">
+                                                            <i class="fa fa-edit"></i>
+                                                            <span>Chỉnh sửa</span>
+                                                        </button>
+                                                        <a href="#" class="btn btn-xs btn-danger">
+                                                            <i class="fa fa-trash"></i>
+                                                            <span>Xóa</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" class="flat" name="id[]" value="1">
+                                                    </td>
+                                                    <td>HD000003</td>
+                                                    <td>06/05/2016 21:20</td>
+                                                    <td>Khách lẻ</td>
+                                                    <td>
+                                                        <h5 class="MG0">
+                                                            <span class="label label-success">Hoàn thành</span>
+                                                        </h5>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>570,000</strong>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button class="btn btn-xs btn-warning" data-toggle="modal" data-target="#editInvoice">
+                                                            <i class="fa fa-edit"></i>
+                                                            <span>Chỉnh sửa</span>
+                                                        </button>
+                                                        <a href="#" class="btn btn-xs btn-danger">
+                                                            <i class="fa fa-trash"></i>
+                                                            <span>Xóa</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" class="flat" name="id[]" value="1">
+                                                    </td>
+                                                    <td>HD000002</td>
+                                                    <td>06/05/2016 21:20</td>
+                                                    <td>Khách lẻ</td>
+                                                    <td>
+                                                        <h5 class="MG0">
+                                                            <span class="label label-warning">Còn nợ</span>
+                                                        </h5>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>109,000</strong>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button class="btn btn-xs btn-warning" data-toggle="modal" data-target="#editInvoice">
+                                                            <i class="fa fa-edit"></i>
+                                                            <span>Chỉnh sửa</span>
+                                                        </button>
+                                                        <a href="#" class="btn btn-xs btn-danger">
+                                                            <i class="fa fa-trash"></i>
+                                                            <span>Xóa</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" class="flat" name="id[]" value="1">
+                                                    </td>
+                                                    <td>HD000001</td>
+                                                    <td>06/05/2016 21:20</td>
+                                                    <td>Khách lẻ</td>
+                                                    <td>
+                                                        <h5 class="MG0">
+                                                            <span class="label label-success">Hoàn thành</span>
+                                                        </h5>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>290,000</strong>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button class="btn btn-xs btn-warning" data-toggle="modal" data-target="#editInvoice">
+                                                            <i class="fa fa-edit"></i>
+                                                            <span>Chỉnh sửa</span>
+                                                        </button>
+                                                        <a href="#" class="btn btn-xs btn-danger">
+                                                            <i class="fa fa-trash"></i>
+                                                            <span>Xóa</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div id="editInvoice" class="modal animated fadeInDown" role="dialog">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Thông tin đơn hàng</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-md-7">
+                                                                <div class="table-responsive">
+                                                                    <table class="table table-borderless">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <strong>Mã đơn hàng :</strong>
+                                                                                </td>
+                                                                                <td>
+                                                                                    HD000001
+                                                                                </td>
+                                                                                <td>
+                                                                                    <strong>Trạng thái :</strong>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select name="status" id="status">
+                                                                                        <option value="">Hoàn thành</option>
+                                                                                        <option value="">Còn nợ</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <strong>Ngày bán :</strong>
+                                                                                </td>
+                                                                                <td>14/05/2016 12:34:56</td>
+                                                                                <td>
+                                                                                    <strong>Khách hàng :</strong>
+                                                                                </td>
+                                                                                <td>Khách lẻ</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="table-responsive">
+                                                                    <table class="table jambo_table table-bordered">
+                                                                        <colgroup>
+                                                                            <col width="5%">
+                                                                            <col width="15%">
+                                                                            <col width="35%">
+                                                                            <col width="15%">
+                                                                            <col width="15%">
+                                                                            <col width="15%">
+                                                                        </colgroup>
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="text-center">STT</th>
+                                                                                <th>Mã hàng hóa</th>
+                                                                                <th>Tên hàng hóa</th>
+                                                                                <th class="text-right">Giá bán</th>
+                                                                                <th class="text-center">Số lượng</th>
+                                                                                <th class="text-right">Thành tiền</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="text-center">1</td>
+                                                                                <td>SP00001</td>
+                                                                                <td>TH true milk dâu 110ml</td>
+                                                                                <td class="text-right">5,000</td>
+                                                                                <td class="text-center">4</td>
+                                                                                <td class="text-right">20,000</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="text-center">2</td>
+                                                                                <td>SP00002</td>
+                                                                                <td>Thuốc Marl black</td>
+                                                                                <td class="text-right">21,000</td>
+                                                                                <td class="text-center">1</td>
+                                                                                <td class="text-right">21,000</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-3 col-md-offset-9">
+                                                                <div class="table-responsive">
+                                                                    <table class="table table-borderless">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Tổng tiền hàng :</td>
+                                                                                <td class="text-right">
+                                                                                    <strong>41,000</strong>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Giảm giá :</td>
+                                                                                <td class="text-right">
+                                                                                    <strong>0</strong>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Tổng cộng :</td>
+                                                                                <td class="text-right">
+                                                                                    <strong>41,000</strong>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Đã thanh toán :</td>
+                                                                                <td class="text-right">
+                                                                                    <strong>41,000</strong>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Còn nợ :</td>
+                                                                                <td class="text-right">
+                                                                                    <strong>0</strong>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-success">
+                                                            <i class="fa fa-floppy-o"></i>
+                                                            <span>Lưu</span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                                            <i class="fa fa-close"></i>
+                                                            <span>Đóng</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <label>
+                                        <span>Hiển thị</span>
+                                        <select name="limit" id="limit" style="padding: 5px;">
+                                            <option value="10" selected="selected">10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                            <option value="0">Tất cả</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12 text-right">
+                                    <div class="paging">
+                                        <span class="current">1</span>
+                                        <a href="#">2</a>
+                                        <a href="#">&gt;</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -392,7 +533,18 @@
 
                 // data picker
                 $('#reservation').daterangepicker({
+                        format: 'DD/MM/YYYY',
                         opens: 'left',
+                        locale: {                            
+                            applyLabel: 'Áp dụng',
+                            cancelLabel: 'Hủy',
+                            fromLabel: 'Từ',
+                            toLabel: 'Đến',
+                            customRangeLabel: 'Tùy chọn',
+                            daysOfWeek: ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
+                            monthNames: ['Tháng một', 'Tháng hai', 'Tháng ba', 'Tháng tư', 'Tháng năm', 'Tháng sáu', 'Tháng bảy', 'Tháng tám', 'Tháng chín', 'Tháng mười', 'Tháng mười một', 'Tháng mười hai'],
+                            firstDay: 1
+                        }
                     }, function (start, end, label) {
                     console.log(start.toISOString(), end.toISOString(), label);
                 });
