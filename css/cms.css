@@ -87,6 +87,9 @@ textarea.form-control {
 .table thead th {
     font-weight: bold;
 }
+.table .vertical-middle {
+    vertical-align: middle;
+}
 /* LEFT SIDEBAR */
 .main .left-col {
 	padding: 0;
@@ -976,12 +979,13 @@ table.jambo_table tbody tr.selected td {
     margin: 4px;
 }
 /* Input group */
+.input-group .input-group-btn {
+    padding: 0 0 0 5px;
+}
 .input-group .input-group-btn select {
     min-width: 160px;
-    margin-left: 5px;
 }
 .input-group .input-group-btn > .btn {
-    margin-left: 5px;
     border-radius: 4px;
 }
 /* Placeholder */
