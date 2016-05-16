@@ -71,9 +71,6 @@ body{
 	clear:both;
 }
 
-input[type="text"]{
-  padding:5px;
-}
 .none{
 	margin:0;
 	padding:0;

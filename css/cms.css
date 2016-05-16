@@ -31,7 +31,8 @@ hr {
 .btn-success.focus,
 .btn-success:active,
 .btn-success.active,
-.btn-success.disabled {
+.btn-success.disabled,
+.open > .dropdown-toggle.btn-success {
     background-color:#19A98B;
 }
 .btn-group > .btn.active {
@@ -89,6 +90,10 @@ textarea.form-control {
 }
 .table .vertical-middle {
     vertical-align: middle;
+}
+.btn-group .dropdown-menu li a {
+    width: 100%;
+    padding: 8px 15px;
 }
 /* LEFT SIDEBAR */
 .main .left-col {
