@@ -993,6 +993,87 @@ table.jambo_table tbody tr.selected td {
 .input-group .input-group-btn > .btn {
     border-radius: 4px;
 }
+/* Infor box */
+.infobox {
+    display: inline-block;
+    width: 230px;
+    height: 66px;
+    color: #555;
+    background-color: #fff;
+    box-shadow: none;
+    border-radius: 0;
+    margin: -1px 0 0 -1px;
+    padding: 8px 3px 6px 9px;
+    border: 1px dotted;
+    border-color: #d8d8d8!important;
+    vertical-align: middle;
+    text-align: left;
+    position: relative;
+}
+.infobox-blue {
+    color: #6fb3e0;
+}
+.infobox-orange {
+    color: #f79263;
+}
+.infobox-red {
+    color: #d53f40;
+}
+.infobox > .infobox-icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 44px;
+}
+.infobox > .infobox-icon {
+    display: inline-block;
+    height: 44px;
+    margin: 0;
+    padding: 1px 1px 0 2px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    position: relative;
+    border-radius: 100%;
+    -webkit-box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+    box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+}
+.infobox > .infobox-icon > i {
+    line-height: 44px;
+    color: #FFF;
+    font-size: 26px;
+}
+.infobox-blue > .infobox-icon {
+    background-color: #6fb3e0;
+}
+.infobox-orange > .infobox-icon {
+    background-color: #f79263;
+}
+.infobox-red > .infobox-icon {
+    background-color: #d53f40;
+}
+.infobox > .infobox-data {
+    display: inline-block;
+    border: none;
+    border-top-width: 0;
+    font-size: 13px;
+    text-align: left;
+    line-height: 21px;
+    min-width: 130px;
+    padding-left: 8px;
+    position: relative;
+    top: 0;
+}
+.infobox > .infobox-data > .infobox-data-number {
+    display: block;
+    font-size: 22px;
+    margin: 2px 0 4px;
+    position: relative;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.15);
+}
+.infobox > .infobox-data > .infobox-content {
+    display: block;
+    color: #555;
+}
 /* Placeholder */
 ::-webkit-input-placeholder {
     color: #858585;
