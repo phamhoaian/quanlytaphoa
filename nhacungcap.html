@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/font-awesome.css">
         <link rel="stylesheet" href="css/cms.css">
+        <link rel="stylesheet" href="css/green.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -507,5 +508,35 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/cms.js"></script>
+        <script src="js/icheck.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('input.flat').iCheck({
+                    checkboxClass: 'icheckbox_flat-green',
+                    radioClass: 'iradio_flat-green'
+                });
+            });
+            
+            $('table input').on('ifChecked', function () {
+                $(this).parent().parent().parent().addClass('selected');
+                $(this).attr("checked", true);
+                $("input[name=boxChecked]").val($("input[name='id[]']:checked").length);
+            });
+            $('table input').on('ifUnchecked', function () {
+                $(this).parent().parent().parent().removeClass('selected');
+                $(this).attr("checked", false);
+                $("input[name=boxChecked]").val($("input[name='id[]']:checked").length);
+            });
+            $('input#check-all').on('ifChecked', function () {
+                $("input[name='id[]']").iCheck('check');
+                $("input[name='id[]']").attr("checked", true);
+                $("input[name=boxChecked]").val($("input[name='cat_id[]']:checked").length);
+            });
+            $('input#check-all').on('ifUnchecked', function () {
+                $("input[name='id[]']").iCheck('uncheck');
+                $("input[name='id[]']").attr("checked", false);
+                $("input[name=boxChecked]").val(0);
+            });
+        </script>
     </body>
 </html>
