@@ -170,55 +170,12 @@
                     </li>
                     <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">Khách hàng</span></li>
                 </ul>
+                <!-- /breadcrumb -->
                 <div class="main-content">
                     <div class="page-title">
                         <div class="row">
                             <div class="col-md-6 title">
                                 <h3>Khách hàng</h3>
-                            </div>
-                        </div>
-                        <div id="addCustomer" class="modal animated fadeInDown" role="dialog">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title">Thêm khách hàng</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="form-horizontal col-md-9 col-md-offset-1">
-                                                <div class="form-group">
-                                                    <label for="" class="control-label col-md-4">Tên khách hàng</label>
-                                                    <div class="col-md-8">
-                                                        <input type="text" class="form-control" placeholder="Nhập tên khách hàng">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="" class="control-label col-md-4">Điện thoại</label>
-                                                    <div class="col-md-8">
-                                                        <input type="text" class="form-control" placeholder="Nhập SĐT của khách hàng">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="" class="control-label col-md-4">Địa chỉ</label>
-                                                    <div class="col-md-8">
-                                                        <input type="text" class="form-control" placeholder="Nhập địa chỉ của khách hàng">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-success">
-                                            <i class="fa fa-floppy-o"></i>
-                                            <span>Lưu</span>
-                                        </button>
-                                        <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                            <i class="fa fa-close"></i>
-                                            <span>Đóng</span>
-                                        </button>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -254,6 +211,7 @@
                                     </button>
                                 </div>
                             </div>
+                            <!-- /search-box -->
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                     <div class="table-responsive">
@@ -351,6 +309,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- list -->
                             <div id="editCustomer" class="modal animated fadeInDown" role="dialog">
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
@@ -369,7 +328,7 @@
                                                                         <strong>Mã khách hàng :</strong>
                                                                     </td>
                                                                     <td class="vertical-middle">
-                                                                        HD000001
+                                                                        KH00001
                                                                     </td>
                                                                     <td class="vertical-middle">
                                                                         <strong>Điện thoại :</strong>
@@ -435,15 +394,19 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td class="text-center">1</td>
-                                                                    <td>HD00001</td>
-                                                                    <td>10/05/2016 12:34:56</td>
-                                                                    <td class="text-right">20,000</td>
+                                                                    <td>
+                                                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#viewInvoice" title="Click vào hiển thị thông tin đơn hàng">HD00002</a>
+                                                                    </td>
+                                                                    <td>15/05/2016 12:34:56</td>
+                                                                    <td class="text-right">41,000</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="text-center">2</td>
-                                                                    <td>HD00002</td>
-                                                                    <td>15/05/2016 12:34:56</td>
-                                                                    <td class="text-right">41,000</td>
+                                                                    <td>
+                                                                        <a href="javascript:void(0)" data-toggle="modal" data-target="#viewInvoice" title="Click vào hiển thị thông tin đơn hàng">HD00001</a>
+                                                                    </td>
+                                                                    <td>10/05/2016 12:34:56</td>
+                                                                    <td class="text-right">20,000</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
@@ -473,9 +436,191 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- /editCustomer -->
+                            <div id="addCustomer" class="modal animated fadeInDown" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Thêm khách hàng</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="form-horizontal col-md-9 col-md-offset-1">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label col-md-4">Tên khách hàng</label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Nhập tên khách hàng">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label col-md-4">Điện thoại</label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Nhập SĐT của khách hàng">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label col-md-4">Địa chỉ</label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Nhập địa chỉ của khách hàng">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success">
+                                                <i class="fa fa-floppy-o"></i>
+                                                <span>Lưu</span>
+                                            </button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                                <i class="fa fa-close"></i>
+                                                <span>Đóng</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /addCustomer -->
+                            <div id="viewInvoice" class="modal animated fadeInDown" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Thông tin đơn hàng</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-borderless">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <strong>Mã đơn hàng :</strong>
+                                                                    </td>
+                                                                    <td>
+                                                                        HD00002
+                                                                    </td>
+                                                                    <td>
+                                                                        <strong>Trạng thái :</strong>
+                                                                    </td>
+                                                                    <td>Hoàn thành</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <strong>Ngày bán :</strong>
+                                                                    </td>
+                                                                    <td>14/05/2016 12:34:56</td>
+                                                                    <td>
+                                                                        <strong>Khách hàng :</strong>
+                                                                    </td>
+                                                                    <td>Anh Hoàng</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table jambo_table table-bordered">
+                                                            <colgroup>
+                                                                <col width="5%">
+                                                                <col width="15%">
+                                                                <col width="35%">
+                                                                <col width="15%">
+                                                                <col width="15%">
+                                                                <col width="15%">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="text-center">STT</th>
+                                                                    <th>Mã hàng hóa</th>
+                                                                    <th>Tên hàng hóa</th>
+                                                                    <th class="text-right">Giá bán</th>
+                                                                    <th class="text-center">Số lượng</th>
+                                                                    <th class="text-right">Thành tiền</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="text-center">1</td>
+                                                                    <td>SP00001</td>
+                                                                    <td>TH true milk dâu 110ml</td>
+                                                                    <td class="text-right">5,000</td>
+                                                                    <td class="text-center">4</td>
+                                                                    <td class="text-right">20,000</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">2</td>
+                                                                    <td>SP00002</td>
+                                                                    <td>Thuốc Marl black</td>
+                                                                    <td class="text-right">21,000</td>
+                                                                    <td class="text-center">1</td>
+                                                                    <td class="text-right">21,000</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-3 col-md-offset-9">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-borderless">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Tổng tiền hàng :</td>
+                                                                    <td class="text-right">
+                                                                        <strong>41,000</strong>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Giảm giá :</td>
+                                                                    <td class="text-right">
+                                                                        <strong>0</strong>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Tổng cộng :</td>
+                                                                    <td class="text-right">
+                                                                        <strong>41,000</strong>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Đã thanh toán :</td>
+                                                                    <td class="text-right">
+                                                                        <strong>41,000</strong>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Còn nợ :</td>
+                                                                    <td class="text-right">
+                                                                        <strong>0</strong>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                                <i class="fa fa-close"></i>
+                                                <span>Đóng</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /viewInvoice -->
                         </div>
                     </div>
                 </div>
+                <!-- /main-content -->
             </div>
             <!-- /right-col -->
         </div>
