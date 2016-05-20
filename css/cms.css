@@ -767,6 +767,7 @@ table.jambo_table tbody tr.selected td {
 /* datarangepicker */
 .daterangepicker.dropdown-menu {
     padding: 5px;
+    z-index: 99999;
 }
 .daterangepicker.opensright .ranges,
 .daterangepicker.opensright .calendar,
