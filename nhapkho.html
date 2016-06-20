@@ -361,11 +361,95 @@
                                             <h4 class="modal-title">Tạo phiếu nhập</h4>
                                         </div>
                                         <div class="modal-body">
+                                            <div class="row MB20">
+                                                <div class="col-md-6">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Tìm hàng hóa theo mã hoặc tên">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addProduct" title="Thêm mới hàng hóa">
+                                                                <i class="fa fa-plus"></i>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="row">
-                                                <div class="col-md-8">
+                                                <div class="col-md-12">
+                                                    <div class="table-responsive">
+                                                        <table class="table jambo_table table-bordered">
+                                                            <colgroup>
+                                                                <col width="5%">
+                                                                <col width="5%">
+                                                                <col width="15%">
+                                                                <col width="35%">
+                                                                <col width="15%">
+                                                                <col width="15%">
+                                                                <col width="15%">
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="text-center"></th>
+                                                                    <th class="text-center">STT</th>
+                                                                    <th>Mã hàng hóa</th>
+                                                                    <th>Tên hàng hóa</th>
+                                                                    <th class="text-right">Đơn giá</th>
+                                                                    <th class="text-center">Số lượng</th>
+                                                                    <th class="text-right">Thành tiền</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="text-center">
+                                                                        <button class="btn btn-xs btn-danger">x</button>
+                                                                    </td>
+                                                                    <td class="text-center">1</td>
+                                                                    <td>SP00001</td>
+                                                                    <td>TH true milk dâu 110ml</td>
+                                                                    <td class="text-right">
+                                                                        <input type="text" class="form-control text-right" value="5,000">
+                                                                    </td>
+                                                                    <td class="text-center">
+                                                                        <div class="btn-group">
+                                                                            <input type="button" class="btn btn-default" name="decrease" value="-"/>
+                                                                            <input type="button" class="btn btn-primary" name="attendees" value="4"/>
+                                                                            <input type="button" class="btn btn-default" name="increase" value="+"/>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">20,000</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">
+                                                                        <button class="btn btn-xs btn-danger">x</button>
+                                                                    </td>
+                                                                    <td class="text-center">2</td>
+                                                                    <td>SP00002</td>
+                                                                    <td>Thuốc Marl black</td>
+                                                                    <td class="text-right">
+                                                                        <input type="text" class="form-control text-right" value="21,000"></td>
+                                                                    <td class="text-center">
+                                                                        <div class="btn-group">
+                                                                            <input type="button" class="btn btn-default" name="decrease" value="-"/>
+                                                                            <input type="button" class="btn btn-primary" name="attendees" value="1"/>
+                                                                            <input type="button" class="btn btn-default" name="increase" value="+"/>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="text-right">21,000</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-5 col-md-offset-7">
                                                     <div class="table-responsive" style="position:relative">
                                                         <table class="table table-borderless">
                                                             <tbody>
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        <h5 class="MT0 MB0" style="color:#006fa9"><strong>Thông tin phiếu nhập</strong></h5>
+                                                                    </td>
+                                                                </tr>
                                                                 <tr>
                                                                     <td class="vertical-middle">
                                                                         <strong>Nhà cung cấp :</strong>
@@ -376,6 +460,8 @@
                                                                             <option value="">Cô Hoàng</option>
                                                                         </select>
                                                                     </td>
+                                                                </tr>
+                                                                <tr>
                                                                     <td class="vertical-middle">
                                                                         <strong>Ngày tạo :</strong>
                                                                     </td>
@@ -383,86 +469,31 @@
                                                                         <input type="text" name="createdDate" id="createdDate" class="form-control" value="" placeholder="Chọn ngày tạo phiếu"/>
                                                                     </td>
                                                                 </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="table-responsive">
-                                                        <table class="table jambo_table table-bordered">
-                                                            <colgroup>
-                                                                <col width="5%">
-                                                                <col width="15%">
-                                                                <col width="35%">
-                                                                <col width="15%">
-                                                                <col width="15%">
-                                                                <col width="15%">
-                                                            </colgroup>
-                                                            <thead>
                                                                 <tr>
-                                                                    <th class="text-center">STT</th>
-                                                                    <th>Mã hàng hóa</th>
-                                                                    <th>Tên hàng hóa</th>
-                                                                    <th class="text-right">Giá bán</th>
-                                                                    <th class="text-center">Số lượng</th>
-                                                                    <th class="text-right">Thành tiền</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="text-center">1</td>
-                                                                    <td>SP00001</td>
-                                                                    <td>TH true milk dâu 110ml</td>
-                                                                    <td class="text-right">5,000</td>
-                                                                    <td class="text-center">4</td>
-                                                                    <td class="text-right">20,000</td>
+                                                                    <td colspan="2">
+                                                                        <h5 class="MB0" style="color:#006fa9"><strong>Thông tin thanh toán</strong></h5>
+                                                                    </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="text-center">2</td>
-                                                                    <td>SP00002</td>
-                                                                    <td>Thuốc Marl black</td>
-                                                                    <td class="text-right">21,000</td>
-                                                                    <td class="text-center">1</td>
-                                                                    <td class="text-right">21,000</td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-3 col-md-offset-9">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-borderless">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>Tổng tiền hàng :</td>
+                                                                    <td class="vertical-middle">
+                                                                        <strong>Tổng tiền hàng :</strong>
+                                                                    </td>
                                                                     <td class="text-right">
                                                                         <strong>41,000</strong>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Giảm giá :</td>
+                                                                    <td class="vertical-middle">
+                                                                        <strong>Đã thanh toán :</strong>
+                                                                    </td>
                                                                     <td class="text-right">
-                                                                        <strong>0</strong>
+                                                                        <input type="text" name="reducePrice" id="reducePrice" class="form-control text-right" value="41,000">
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Tổng cộng :</td>
-                                                                    <td class="text-right">
-                                                                        <strong>41,000</strong>
+                                                                    <td class="vertical-middle">
+                                                                        <strong>Còn nợ :</strong>
                                                                     </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Đã thanh toán :</td>
-                                                                    <td class="text-right">
-                                                                        <strong>41,000</strong>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Còn nợ :</td>
                                                                     <td class="text-right">
                                                                         <strong>0</strong>
                                                                     </td>
@@ -492,7 +523,7 @@
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Thông tin đơn hàng</h4>
+                                            <h4 class="modal-title">Thông tin nhập kho</h4>
                                         </div>
                                         <div class="modal-body">
                                             <div class="row">
@@ -502,10 +533,10 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>
-                                                                        <strong>Mã đơn hàng :</strong>
+                                                                        <strong>Mã nhập kho :</strong>
                                                                     </td>
                                                                     <td>
-                                                                        HD000001
+                                                                        NK000001
                                                                     </td>
                                                                     <td>
                                                                         <strong>Trạng thái :</strong>
@@ -519,13 +550,13 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <strong>Ngày bán :</strong>
+                                                                        <strong>Ngày nhập :</strong>
                                                                     </td>
                                                                     <td>14/05/2016 12:34:56</td>
                                                                     <td>
-                                                                        <strong>Khách hàng :</strong>
+                                                                        <strong>Nhà cung cấp :</strong>
                                                                     </td>
-                                                                    <td>Khách lẻ</td>
+                                                                    <td>Kim Anh</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
@@ -549,7 +580,7 @@
                                                                     <th class="text-center">STT</th>
                                                                     <th>Mã hàng hóa</th>
                                                                     <th>Tên hàng hóa</th>
-                                                                    <th class="text-right">Giá bán</th>
+                                                                    <th class="text-right">Đơn giá</th>
                                                                     <th class="text-center">Số lượng</th>
                                                                     <th class="text-right">Thành tiền</th>
                                                                 </tr>
@@ -583,18 +614,6 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td>Tổng tiền hàng :</td>
-                                                                    <td class="text-right">
-                                                                        <strong>41,000</strong>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Giảm giá :</td>
-                                                                    <td class="text-right">
-                                                                        <strong>0</strong>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Tổng cộng :</td>
                                                                     <td class="text-right">
                                                                         <strong>41,000</strong>
                                                                     </td>
@@ -631,6 +650,128 @@
                                 </div>
                             </div>
                             <!-- /editPurchase -->
+                            <div id="addProduct" class="modal animated fadeInDown" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Thêm hàng hóa</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h5 class="MT0" style="color:#006fa9"><strong>Thông tin chung</strong></h5>
+                                            <div class="row">
+                                                <div class="form-horizontal col-md-9 col-md-offset-1">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label col-md-4">Tên hàng hóa</label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Nhập tên hàng hóa">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label col-md-4">Nhóm hàng</label>
+                                                        <div class="col-md-8">
+                                                            <div class="input-group">
+                                                                <select name="filter" class="form-control">
+                                                                    <option value="1">Gia dụng</option>
+                                                                    <option value="2" selected="selected">Mì</option>
+                                                                    <option value="3">Nước</option>
+                                                                    <option value="2">Sữa</option>
+                                                                </select>
+                                                                <span class="input-group-btn">
+                                                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addProductGroup" title="Thêm mới nhóm hàng">
+                                                                        <i class="fa fa-plus"></i>
+                                                                    </button>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label col-md-4">Nhà cung cấp</label>
+                                                        <div class="col-md-8">
+                                                            <select name="filter" class="form-control">
+                                                                <option value="1">Kim Anh</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label col-md-4">Giá vốn</label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control text-right" value="0">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label col-md-4">Giá bán</label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control text-right" value="0">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="MT0" style="color:#006fa9"><strong>Thông tin mở rộng</strong></h5>
+                                            <div class="row">
+                                                <div class="form-horizontal col-md-9 col-md-offset-1">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label col-md-4">Đơn vị tính</label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Nhập đơn vị của hàng hóa: hộp, lốc...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label col-md-4">Hình ảnh</label>
+                                                        <div class="col-md-8">
+                                                            <input type="file">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success">
+                                                <i class="fa fa-floppy-o"></i>
+                                                <span>Lưu</span>
+                                            </button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                                <i class="fa fa-close"></i>
+                                                <span>Đóng</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /addProduct -->
+                            <div id="addProductGroup" class="modal animated fadeInDown" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Thêm nhóm hàng</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="form-horizontal col-md-9 col-md-offset-1">
+                                                    <div class="form-group">
+                                                        <label for="" class="control-label col-md-4">Tên nhóm hàng</label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Nhập tên nhóm hàng">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success">
+                                                <i class="fa fa-floppy-o"></i>
+                                                <span>Lưu</span>
+                                            </button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                                <i class="fa fa-close"></i>
+                                                <span>Đóng</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /addProductGroup -->
                         </div>
                     </div>
                 </div>
