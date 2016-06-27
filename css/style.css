@@ -1,0 +1,104 @@
+html, body {
+    height: 100%;
+    position: relative;
+}
+body {
+    color: #656d78;
+    background: #FFF;
+    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.471;
+}
+a {
+    color: #5A738E;
+    text-decoration: none;
+}
+hr {
+    border-color: #e5e5e5;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.main-content {
+	padding: 20px;
+}
+/* JAMBO TABLE */
+table.jambo_table {
+    border: 1px solid rgba(221, 221, 221, 0.78);
+    margin-bottom: 15px;
+}
+table.jambo_table thead {
+    background: rgba(52, 73, 94, 0.94);
+    color: #ECF0F1;
+}
+table.jambo_table thead .column-title {
+    white-space: nowrap;
+}
+table.jambo_table tbody tr td {
+    vertical-align: middle;
+}
+table.jambo_table .published .fa,
+table.jambo_table .published .glyphicon,
+table.jambo_table .featured .fa,
+table.jambo_table .featured .glyphicon{
+    margin: 0;
+    width: 12px;
+}
+table.jambo_table .published .fa-check,
+table.jambo_table .featured .fa-check {
+    color: #378137;
+}
+table.jambo_table .published .fa-close,
+table.jambo_table .featured .fa-close {
+    color: #942a25;
+}
+table.jambo_table .featured .fa-star {
+    color: #FFA019;
+}
+table.jambo_table .image img{
+    max-width: 30px;
+}
+table.jambo_table .fa-image {
+    font-size: 15px;
+}
+table.jambo_table tbody tr.selected {
+    background: rgba(38, 185, 154, 0.16);
+}
+table.jambo_table tbody tr.selected td {
+    border-top: 1px solid rgba(38, 185, 154, 0.40);
+    border-bottom: 1px solid rgba(38, 185, 154, 0.40);
+}
+.table thead th {
+    font-weight: bold;
+}
+.table .vertical-middle {
+    vertical-align: middle;
+}
+.scroll {
+    overflow-y: scroll;
+    height: 500px;
+}
+/* Input group */
+.input-group .input-group-btn {
+    padding: 0 0 0 5px;
+}
+.input-group .input-group-btn select {
+    min-width: 160px;
+}
+.input-group .input-group-btn > .btn {
+    border-radius: 4px;
+}
+.form-control {
+    border-radius: 4px !important;
+}
