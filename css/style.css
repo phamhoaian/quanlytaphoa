@@ -35,11 +35,11 @@ hr {
 }
 /* JAMBO TABLE */
 table.jambo_table {
-    border: 1px solid rgba(221, 221, 221, 0.78);
+    border: 1px solid #1389B9;
     margin-bottom: 15px;
 }
 table.jambo_table thead {
-    background: rgba(52, 73, 94, 0.94);
+    background: #1389B9;
     color: #ECF0F1;
 }
 table.jambo_table thead .column-title {
@@ -85,9 +85,12 @@ table.jambo_table tbody tr.selected td {
 .table .vertical-middle {
     vertical-align: middle;
 }
+.table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
+    border: none;
+}
 .scroll {
     overflow-y: scroll;
-    height: 500px;
+    height: 430px;
 }
 /* Input group */
 .input-group .input-group-btn {
@@ -101,4 +104,69 @@ table.jambo_table tbody tr.selected td {
 }
 .form-control {
     border-radius: 4px !important;
+}
+/* Product */
+.product {
+    border: 1px solid #4bc6f2;
+    overflow: hidden;
+    padding: 20px 10px;
+}
+.product .item {
+    text-align: center;
+    margin: 10px 0;
+}
+.product .item > a {
+    text-decoration: none;
+}
+.product .productImg {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    line-height: 100px;
+}
+.product .productImg img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.product .productPrice {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-weight: bold;
+    font-size: 11px;
+    background: #1389b9;
+    padding: 0 8px;
+    line-height: 21px;
+    color: #fff;
+}
+.product .productName {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    margin-top: 8px;
+}
+/* Invoice */
+.infoInvoice {
+    background-color: #EBF7FB;
+    position: relative;
+    padding: 20px 30px;
+}
+.infoInvoice h3 {
+    border-bottom: 1px solid #1389B9;
+    margin: 0;
+}
+.infoInvoice h3 span {
+    background-color: #1389B9;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 2px 2px 0 0;
+}
+.infoInvoice input[type="text"] {
+    padding: 5px;
 }
