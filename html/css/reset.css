@@ -71,9 +71,6 @@ body{
 	clear:both;
 }
 
-input[type="text"]{
-  padding:5px;
-}
 .none{
 	margin:0;
 	padding:0;
@@ -154,3 +151,5 @@ a i{
 .fontRed{color:#ff4747;}
 .fontGrey{color:#666666;}
 
+.MG0{margin:0;}
+.ML5{margin-left: 5px;}
