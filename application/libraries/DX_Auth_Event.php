@@ -96,8 +96,8 @@ class DX_Auth_Event
 		// Create content
 		$content = sprintf($this->ci->lang->line('auth_activate_content'), 
 			$this->ci->config->item('DX_website_name'), 
-			$this->ci->config->item('DX_email_activation_expire') / 60 / 60,
 			$data['activate_url'],
+			$this->ci->config->item('DX_email_activation_expire') / 60 / 60,
 			$data['username'], 
 			$data['email'],
 			$data['password'],
