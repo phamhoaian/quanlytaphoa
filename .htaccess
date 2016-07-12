@@ -1,0 +1,18 @@
+#本番環境の場合は以下のコメントを外す
+#SetEnv CI_ENV production
+
+php_value error_reporting 6135
+php_flag log_errors On
+php_flag display_errors On
+php_value error_log "/var/log/php/error_log"
+
+
+Options SymLinksIfOwnerMatch
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ http://localhost/$1 [R=301,L]
+
+
+RewriteEngine on
+RewriteCond $1 !^(index\.php|index_cron\.php|pMA|favicon\.ico|blog|url|sitemap_mobile\.xml|sitemap\.xml|y_key_.+\.html$|google.+\.html$|ga\.php|clients|test\.php|mixi|css|kikaku|local|cms_parts|app|parts|rss|inc|js|emoji|images|img|common|sliderimg|data|captcha|jscripts|uploads|wordpress|phpmyadmin|.+\.css$|.+\.gif$|.+\.jpg$|.+\.png$|.+\.js$)
+RewriteRule ^(.*)$ index.php/$1 [L]
