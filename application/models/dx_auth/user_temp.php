@@ -1,10 +1,11 @@
 <?php
 
-class User_Temp extends CI_Model
+class User_temp extends CI_Model
 {
-    function __construct()
-    {
-        parent::__construct();
+	function __construct()
+	{
+		parent::__construct();
+
 		// Other stuff
 		$this->_prefix = $this->config->item('DX_table_prefix');
 		$this->_table = $this->_prefix.$this->config->item('DX_user_temp_table');
@@ -78,8 +79,7 @@ class User_Temp extends CI_Model
 	function create_temp($data)
 	{
 		$data['created'] = date('Y-m-d H:i:s', time());
-		return $this->db->insert($this->_table, $data);
+		$this->db->insert($this->_table, $data);
+		return $this->db->insert_id();
 	}
 }
-
-?>

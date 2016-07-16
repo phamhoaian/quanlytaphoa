@@ -1,10 +1,10 @@
 <?php
 
-class Roles extends CI_Model
+class Roles extends CI_Model 
 {
-    function __construct()
-    {
-        parent::__construct();
+	function __construct()
+	{
+		parent::__construct();
 		
 		// Other stuff
 		$this->_prefix = $this->config->item('DX_table_prefix');
@@ -39,5 +39,3 @@ class Roles extends CI_Model
 		$this->db->delete($this->_table);		
 	}
 }
-
-?>

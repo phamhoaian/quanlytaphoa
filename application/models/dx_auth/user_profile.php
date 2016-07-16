@@ -1,9 +1,9 @@
 <?php
-class User_Profile extends CI_Model
+class User_profile extends CI_Model
 {
-    function __construct()
-    {
-        parent::__construct();
+	function __construct()
+	{
+		parent::__construct();
 
 		$this->_prefix = $this->config->item('DX_table_prefix');		
 		$this->_table = $this->_prefix.$this->config->item('DX_user_profile_table');
@@ -40,5 +40,3 @@ class User_Profile extends CI_Model
 		return $this->db->delete($this->_table);
 	}
 }
-
-?>

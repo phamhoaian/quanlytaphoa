@@ -1,10 +1,10 @@
 <?php
 
-class Permissions Extends CI_Model
+class Permissions Extends CI_Model 
 {
-    function __construct()
-    {
-        parent::__construct();
+	function __construct()
+	{
+		parent::__construct();
 
 		// Other stuff
 		$this->_prefix = $this->config->item('DX_table_prefix');
@@ -223,5 +223,3 @@ class Permissions Extends CI_Model
 		return $this->db->get($this->_table);
 	}
 }
-
-?>

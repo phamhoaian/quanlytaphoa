@@ -14,8 +14,7 @@
 | path to your installation.
 |
 */
-//$config['base_url']	= 'http://takkyu-navi.jp/';
-$config['base_url']	= '';
+$config['base_url']	= 'http://localhost/quanlytaphoa';
 
 /*
 |--------------------------------------------------------------------------
@@ -71,7 +70,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'japanese';
+$config['language']	= 'english';
 
 /*
 |--------------------------------------------------------------------------

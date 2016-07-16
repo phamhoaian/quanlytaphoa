@@ -1,23 +1,15 @@
 <?php
 
-class Users extends CI_Model
+class Users extends CI_Model 
 {
-    function __construct()
-    {
-        parent::__construct();
+	function __construct()
+	{
+		parent::__construct();
 
 		// Other stuff
 		$this->_prefix = $this->config->item('DX_table_prefix');
 		$this->_table = $this->_prefix.$this->config->item('DX_users_table');	
 		$this->_roles_table = $this->_prefix.$this->config->item('DX_roles_table');
-		$this->_table_language = $this->_prefix.$this->config->item('DX_user_language_table');	
-		$this->_table_language_m = $this->_prefix.$this->config->item('DX_language_m_table');	
-		
-		$this->language = $this->config->item('language');
-		$this->db->select();
-		$this->db->where('name',$this->language);
-		$this->selected_language = $this->db->get($this->_table_language_m,1)->row();
-		
 	}
 	
 	// General function
@@ -52,10 +44,7 @@ class Users extends CI_Model
 
 	function get_user_by_username($username)
 	{
-		$this->db->select("users.*,user_language.username");
-		$this->db->join($this->_table_language,'users.id = user_language.user_id','left');
-		$this->db->where('user_language.username', $username);
-		$this->db->where('user_language.lang',$this->selected_language->id);
+		$this->db->where('username', $username);
 		return $this->db->get($this->_table);
 	}
 	
@@ -67,11 +56,8 @@ class Users extends CI_Model
 	
 	function get_login($login)
 	{
-		// $this->db->where('username', $login);
-		$this->db->select("users.*,user_language.username");
-		$this->db->join($this->_table_language,'users.id = user_language.user_id','left');
-		$this->db->where('users.email', $login);
-		$this->db->where('user_language.lang',$this->selected_language->id);
+		$this->db->where('username', $login);
+		$this->db->or_where('email', $login);
 		return $this->db->get($this->_table);
 	}
 	
@@ -87,8 +73,7 @@ class Users extends CI_Model
 	{
 		$this->db->select('1', FALSE);
 		$this->db->where('LOWER(username)=', strtolower($username));
-		$this->db->where('lang',$this->selected_language->id);
-		return $this->db->get($this->_table_language);
+		return $this->db->get($this->_table);
 	}
 
 	function check_email($email)
@@ -129,34 +114,8 @@ class Users extends CI_Model
 	function create_user($data)
 	{
 		$data['created'] = date('Y-m-d H:i:s', time());
-		
-		// Multilanguage: separate table
-		$username = $data['username'];
-		unset($data['username']);
-		
 		$this->db->insert($this->_table, $data);
-		$user_id = $this->db->insert_id();
-		
-		$data_language['user_id'] = $user_id;
-		//get list language supported
-		$this->db->select();
-		$list_language = $this->db->get($this->_table_language_m)->result_array();
-		
-		$this->load->library('data_help_library');
-		
-		foreach($list_language as $row){
-			$translated_username = $username;
-			$data_language['translate_flag'] = 1;
-			if($row['id'] != $this->selected_language->id){
-				$translated_username = $this->data_help_library->translate_google_api($this->selected_language->code,$row['code'],$translated_username);
-				$data_language['translate_flag'] = 0;
-			}
-			$data_language['username'] = $translated_username;
-			$data_language['lang'] = $row['id'];
-			$this->db->insert($this->_table_language, $data_language);
-		}
-		
-		return $user_id;
+		return $this->db->insert_id();
 	}
 
 	function get_user_field($user_id, $fields)
@@ -222,5 +181,3 @@ class Users extends CI_Model
 		return $this->db->update($this->_table);
 	}
 }
-
-?>
