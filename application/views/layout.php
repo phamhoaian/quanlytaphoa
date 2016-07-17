@@ -54,9 +54,11 @@
     <meta property="og:locale" content="en_GB" />
     <link rel="stylesheet" href="<?php echo base_url();?>public/css/common/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url();?>public/css/common/font-awesome.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>public/css/common/animate.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>public/css/common/reset.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>public/css/common/cms.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="<?php echo base_url();?>public/js/common/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>public/js/common/bootstrap.js"></script>
     <script src="<?php echo base_url();?>public/js/common/cms.js"></script> <!-- jQuery -->
     <?php echo $js;?>
     <?php echo $css;?>
@@ -67,16 +69,21 @@
     <![endif]-->
 </head>
 <body>
-    <?php $this->load->view('parts/header');?>
-    <?php if(isset($position) and $position){ ?>
-    <div id="pankz">
-        <ul class="container">
-        <?php echo $position; ?>
-        </ul>
+    <div class="container main">
+        <?php $this->load->view('parts/left-col');?>
+        <div class="right-col" role="main">
+            <?php $this->load->view('parts/top-nav');?>
+            <?php if (isset($position) and $position) { ?>
+            <ul class="breadcrumb">
+                <?php echo $position; ?>
+            </ul>
+            <?php } ?>
+            <div class="main-content">
+                <?php echo $main;?>
+            </div>
+        </div>
+        <!-- /right-col -->
     </div>
-    <?php } ?>
-    <?php echo $main;?>
-    <?php $this->load->view('parts/footer');?>
     <?php echo $js_foot;?>
 </body>
 </html>

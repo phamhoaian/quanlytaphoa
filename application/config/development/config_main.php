@@ -1,8 +1,7 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 // サイト名
-//define('SITE_NAME','みんなの卓球');
-define('SITE_NAME','卓球ナビ(開発)');
+define('SITE_NAME','Quản lý tạp hóa (development)');
 
 
 // メールアドレス
