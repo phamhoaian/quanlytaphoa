@@ -140,4 +140,21 @@ class MY_Controller extends CI_Controller {
 			$this->js_foot .= '<script type="text/javascript" src="' . base_url() . 'public/js/' . $js_name . '"></script>' . "\n";
 		}
 	}
+
+	public function security_clean($q)
+	{
+		$this->load->helper('security');
+		
+		$q = str_replace( "\0", "", $q );
+		$q = str_replace( '\0', "", $q );
+		
+		
+		$q = xss_clean($q);
+		
+		$q = strip_image_tags($q);
+		$q = encode_php_tags($q);
+		$q = preg_replace(array("/select/si", "/delete/si", "/update/si", "/insert/si","/from/si","/alert/si","/\[removed\]/si","/script/si","/\*/si"), "", $q);
+		
+		return $q;
+	}
 }	

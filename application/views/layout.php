@@ -52,16 +52,16 @@
     ?>
     <meta property="og:site_name" content="<?php echo SITE_NAME; ?>">
     <meta property="og:locale" content="en_GB" />
+    <link rel="stylesheet" href="<?php echo base_url();?>public/css/common/reset.css">
     <link rel="stylesheet" href="<?php echo base_url();?>public/css/common/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url();?>public/css/common/font-awesome.css">
     <link rel="stylesheet" href="<?php echo base_url();?>public/css/common/animate.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>public/css/common/reset.css">
     <link rel="stylesheet" href="<?php echo base_url();?>public/css/common/cms.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="<?php echo base_url();?>public/js/common/bootstrap.js"></script>
     <script src="<?php echo base_url();?>public/js/common/cms.js"></script> <!-- jQuery -->
-    <?php echo $js;?>
     <?php echo $css;?>
+    <?php echo $js;?>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
